@@ -32,10 +32,10 @@ a:hover {
 a:active {
     color: #FFFFFF;
 }
-header > nav {
+nav {
     margin: 10px;
 }
-header > h1 {
+h1 {
     background-color: #0073A8;
     margin: auto;
     width: 80%;
@@ -44,7 +44,7 @@ header > h1 {
     color: #FFFFFF;
     border-radius: 30px;
 }
-main > h2 {
+h2 {
     background-color: #0073A8;
     margin: auto;
     width: 50%;
