@@ -3,6 +3,7 @@ body {
     color: #3D3D3D;
     text-align: center;
     font-family: "Cambria", sans-serif;
+    box-sizing: border-box;
 }
 .contract {
     text-align: left;
