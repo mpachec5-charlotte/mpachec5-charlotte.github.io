@@ -3,7 +3,6 @@ body {
     color: #3D3D3D;
     text-align: center;
     font-family: "Cambria", sans-serif;
-    box-sizing: border-box;
 }
 .contract {
     text-align: left;
@@ -21,7 +20,7 @@ a:link {
     color: #B50000;
 }
 a:visited {
-    color: #0ad80a;
+    color: #236623;
 }
 a:hover {
     background-color: #0073A8;
