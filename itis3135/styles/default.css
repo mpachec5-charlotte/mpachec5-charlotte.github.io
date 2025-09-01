@@ -70,6 +70,6 @@ figcaption {
     color: #FFFFFF;
     font-style: italic;
 }
-ul > {
+ul > li {
     text-align: left;
 }
