@@ -69,3 +69,6 @@ figcaption {
 li {
     text-align: left;
 }
+.invisible{
+    list-style-type: none;
+}
