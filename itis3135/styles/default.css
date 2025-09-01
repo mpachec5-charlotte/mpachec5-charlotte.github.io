@@ -20,7 +20,7 @@ a:link {
     color: #B50000;
 }
 a:visited {
-    color: #004700;
+    color: #0ad80a;
 }
 a:hover {
     background-color: #0073A8;
@@ -70,6 +70,6 @@ figcaption {
     color: #FFFFFF;
     font-style: italic;
 }
-ul > li {
+ul > {
     text-align: left;
 }
