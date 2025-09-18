@@ -21,9 +21,6 @@ a {
 a:link {
     color: #B50000;
 }
-a:visited {
-    color: #236623;
-}
 a:hover {
     background-color: #0073A8;
     border: 2px dashed black;
