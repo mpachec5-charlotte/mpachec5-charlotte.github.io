@@ -4,6 +4,7 @@ body {
 	text-align: center;
 	font-family: "Cambria", sans-serif;
 	max-width: 1000px;
+    margin: 1vh auto;
 }
 .contract {
 	text-align: left;
