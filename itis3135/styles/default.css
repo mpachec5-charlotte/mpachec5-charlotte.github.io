@@ -31,6 +31,9 @@ a:hover {
 a:active {
     color: #FFFFFF;
 }
+a:visited {
+    color: #B50000;
+}
 nav {
     margin: 10px;
 }
