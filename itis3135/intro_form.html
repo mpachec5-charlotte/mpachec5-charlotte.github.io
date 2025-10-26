@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <title> Emilio Pacheco || ITIS 3135 || Introduction Form</title>
+    <style>
+        fieldset {
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-radius: 100px;
+            background-color: #0073A8;
+            margin: 20px auto;
+            width: 80%;
+            color: #FFF;
+            min-width: 300px;
+        }
+        legend {
+            background-color: #0073A8;
+            border-radius: 100px;
+            border: 1px solid black;
+        }
+        input {
+            width: 75%;
+            height: 15px;
+        }
+        #loadImage {
+             max-width: 90%;
+             margin: 10px auto;
+        }
+        #imageCaption {
+            width: 275px;
+            height: 20px;
+        }
+        #firstName, #lastName, #preferredName, #mascotAdjective, #mascotAnimal {
+            max-width: 125px;
+        }
+        #middleName, #divider {
+            max-width: 20px;
+        }
+        .spacer {
+            margin: 20px;
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+        <h2>Introduction Form</h2>
+    </header>
+    <main>
+        <h3>Please submit the form below.</h3>
+        <form>
+            <fieldset>
+                <legend>Name Information</legend>
+                <label for="firstName">First Name:</label>
+                <input id="firstName" name="firstName" type="text" placeholder="First name here" value="Marlon" required><br>
+                <label for="middleName">Middle Name:</label>
+                <input id="middleName" name="middleName" type="text" placeholder="Middle initial here" value="E"><br>
+                <label for="lastName">Last Name:</label>
+                <input id="lastName" name="lastName" type="text" placeholder="Last name here" value="Pacheco Arroyo" required><br>
+                <label for="preferredName">Preferred Name:</label>
+                <input id="preferredName" name="preferredName" type="text" placeholder="Preferred name here">
+        </fieldset>
+        <fieldset>
+            <legend>Acknowledgement Information</legend>
+            <label for="acknowledgementStatement">Enter the following: "I acknowledge that the information I present here is public." and your initials</label>
+            <input id="acknowledgementStatement" name="acknowledgementStatement" type="text" placeholder="Enter the statement and your initials" value="I acknowledge that the information I present here is public. - E.P.A." required><br>
+            <label for="acknowledgementDate">Enter the Date:</label><br>
+            <input id="acknowledgementDate" name="acknowledgementDate" type="text" placeholder="Enter today's date" value="10/26/2025" required>
+        </fieldset>
+        <fieldset>
+            <legend>Mascot Information</legend>
+            <label for="mascotAdjective">Mascot Adjective: </label>
+            <input id="mascotAdjective" name="mascotAdjective" type="text" placeholder="Enter an adjective that starts with the first letter of your first name" value="Curious" required><br>
+            <label for="mascotAnimal">Mascot Animal: </label>
+            <input id="mascotAnimal" name="mascotAnimal" type="text" placeholder="Enter an animal that starts with the first letter of your last name" value="Cat" required><br>
+            <label for="divider">Divider: </label>
+            <input id="divider" name="divider" type="text" placeholder="Enter a divider" value="|">
+        </fieldset>
+        <fieldset>
+            <legend>Picture Information</legend>
+            <label>Add image: </label>
+            <input type="file" name="file" id="introImage" required>
+            <button type="button" onclick="loadImage()">Click Here to Load</button>
+            <div id="loadImage">
+                <img src="images/intro_img.png" alt="Default profile">
+            </div>
+            <label for="imageCaption">Image Caption: </label><br>
+            <input id="imageCaption" name="imageCaption" type="text" placeholder="Enter a caption for your image" value="At my friend's birthday party, holding his cat." required>
+        </fieldset>
+        <fieldset>
+            <legend>Personal Statement</legend>
+            <label for="personalStatement">Personal Statement: </label>
+            <input id="personalStatement" name="personalStatement" type="text" placeholder="Enter your personal statement" value="I am currently a junior at UNC Charlotte, and am studying Computer Science with a minor in Music. I play the viola, occasionally piano, I really like cats, and I sometimes play video games but I am not skilled. In my free time I volunteer with Civil Air Patrol and my church, I write, and I like to travel sometimes." required>
+        </fieldset>
+        <fieldset>
+            <legend>Background Information</legend>
+            <label for="personalBackground">Personal Background: </label>
+            <input id="personalBackground" name="personalBackground" type="text" placeholder="Enter your personal background" value="I was born here in Charlotte, NC" required><br>
+            <label for="professionalBackground">Professional Background: </label>
+            <input id="professionalBackground" name="professionalBackground" type="text" placeholder="Enter your professional background" value="I am the current Orchestra Manager for our university!" required><br>
+            <label for="academicBackground">Academic Background: </label>
+            <input id="academicBackground" name="academicBackground" type="text" placeholder="Enter your academic background" value="I am a junior studying Computer Science, with a concentration in Information Technology and a minor in Music." required><br>
+            <label for="primaryComputer">Primary Computer: </label>
+            <input id="primaryComputer" name="primaryComputer" type="text" placeholder="Enter your primary computer, OS system, type, and location" value="HP, Windows 11, laptop, my bed." required>
+            <div class="spacer"></div>
+        </fieldset>
+        <fieldset>
+            <legend>Course Information</legend>
+            <ul id="courseList"></ul>
+            <button type="button" onClick="addCourse()">Add Course</button>
+            <div class="spacer"></div>
+        </fieldset>
+        <fieldset>
+            <legend>Quote Information</legend>
+            <label for="quote">Quote: </label><br>
+            <input id="quote" name="quote" type="text" placeholder="Enter a quote" value="Next time, baby." required><br>
+            <label for="quoteAuthor">Quote Author: </label><br>
+            <input id="quoteAuthor" name="quoteAuthor" type="text" placeholder="Enter who said your quote" value="Colonel James Rupert &quot;Rhodey&quot; Rhodes (Iron Man)" required>
+        </fieldset>
+        <fieldset>
+            <legend>Other Information</legend>
+            <label for="funnyThing">Something Funny To Remember Me (Optional): </label><br>
+            <input id="funnyThing" name="funnyThing" type="text" placeholder="Enter something funny you'd like to share" value="I love cats even though I'm allergic to them."><br>
+            <label for="shareThing">Something I'd Like to Share (Optional): </label><br>
+            <input id="shareThing" name="shareThing" type="text" placeholder="Enter something you'd like to share" value="I have travelled to all 50 states in the U.S.">
+        </fieldset>
+        <fieldset>
+            <legend>Link Information</legend>
+            <label for="cltWeb">CLT Web</label><br>
+            <input id="cltWeb" name="cltWeb" type="url" placeholder="Enter your CLT Website link" value="https://webpages.charlotte.edu/mpachec5/" required><br>
+            <label for="github">GitHub</label><br>
+            <input id="github" name="github" type="url" placeholder="Enter your GitHub link" value="https://github.com/mpachec5-charlotte" required><br>
+            <label for="githubIo">GitHub.io</label><br>
+            <input id="githubIo" name="githubIo" type="url" placeholder="Enter your GitHub.io site" value="https://mpachec5-charlotte.github.io/" required><br>
+            <label for="freeCodeCamp">freeCodeCamp</label><br>
+            <input id="freeCodeCamp" name="freeCodeCamp" type="url" placeholder="Enter your freeCodeCamp link" value="https://www.freecodecamp.org/mpachec5-charlotte" required><br>
+            <label for="codecademy">Codecademy</label><br>
+            <input id="codecademy" name="codecademy" type="url" placeholder="Enter your Codecademy link" value="https://www.codecademy.com/profiles/mpachec5-charlotte" required><br>
+            <label for="linkedIn">LinkedIn</label><br>
+            <input id="linkedIn" name="linkedIn" type="url" placeholder="Enter your LinkedIn link" value="https://www.linkedin.com/in/marlon-pacheco-arroyo-0a055b253" required>
+            <div class="spacer"></div>
+        </fieldset>
+        <button type="submit">Submit</button><br>
+        <div class="spacer"></div>
+        <button type="reset">Reset</button><br>
+        <div class="spacer"></div>
+        <button type="button" id="clear">Clear</button>
+        <div class="spacer"></div>
+        </form>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+<script src="scripts/HTMLInclude.min.js"></script>
+<script src="scripts/introductions.js"></script>
+</body>
+</html>
