@@ -56,7 +56,7 @@ function generateOutputPage() {
     firstName: get("firstName"),
     middleName: get("middleName"),
     lastName: get("lastName"),
-    preferredName: get("preferredName"),
+    preferred: get("preferred"),
     acknowledgementStatement: get("acknowledgementStatement"),
     acknowledgementDate: get("acknowledgementDate"),
     mascotAdjective: get("mascotAdjective"),
@@ -70,9 +70,9 @@ function generateOutputPage() {
     primaryComputer: get("primaryComputer"),
     quote: get("quote"),
     quoteAuthor: get("quoteAuthor"),
-    funnyThing: get("funnyThing"),
-    shareThing: get("shareThing"),
-    cltWeb: get("cltWeb"),
+    funny: get("funny"),
+    other: get("other"),
+    webpages: get("webpages"),
     github: get("github"),
     githubIo: get("githubIo"),
     freeCodeCamp: get("freeCodeCamp"),
@@ -127,15 +127,15 @@ function generateOutputPage() {
           ${coursesHTML}
         </ul>
       </li>
-      ${data.funnyThing ? `<li><span style="font-weight: bold">Funny/Interesting Thing to Remember me by</span>: ${data.funnyThing}</li>` : ""}
-      ${data.shareThing ? `<li><span style="font-weight: bold">I'd also like to Share</span>: ${data.shareThing}</li>` : ""}
+      ${data.funny ? `<li><span style="font-weight: bold">Funny/Interesting Thing to Remember me by</span>: ${data.funny}</li>` : ""}
+      ${data.other ? `<li><span style="font-weight: bold">I'd also like to Share</span>: ${data.other}</li>` : ""}
     </ul>
     <p>
       "${data.quote}"<br>
       - <span style="font-style: italic">${data.quoteAuthor}</span>
     </p>
     <nav>
-      <a href="${data.cltWeb}" target="_blank">Charlotte.edu</a> ${data.divider}
+      <a href="${data.webpages}" target="_blank">Charlotte.edu</a> ${data.divider}
       <a href="${data.github}" target="_blank">GitHub</a> ${data.divider}
       <a href="${data.githubIo}" target="_blank">GitHub.io</a> ${data.divider}
       <a href="${data.freeCodeCamp}" target="_blank">FreeCodeCamp</a> ${data.divider}
