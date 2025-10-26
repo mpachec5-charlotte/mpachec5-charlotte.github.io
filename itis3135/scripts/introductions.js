@@ -101,9 +101,10 @@ function generateOutputPage() {
   const imageElement = document.querySelector('#loadImage img');
   const imageSrc = imageElement ? imageElement.src : '';
 
-  const fullName = [data.firstName, data.middleName, data.lastName]
-    .filter(Boolean)
-    .join(" ");
+  const fullName = data.preferred
+    ? `${data.firstName} "${data.preferred}" ${data.middleName ? data.middleName + ' ' : ''}${data.lastName}`
+    : [data.firstName, data.middleName, data.lastName].filter(Boolean).join(" ");
+
 
   const main = document.querySelector("main");
   main.innerHTML = `
