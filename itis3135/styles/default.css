@@ -21,18 +21,18 @@ a {
 a:link {
     color: #B50000;
 }
+a:visited {
+    color: #B50000;
+}
 a:hover {
     background-color: #0073A8;
     border: 2px dashed black;
     padding: 3px;
-    color: #FFFFFF !important;
+    color: #FFF;
     border-radius: 10px;
 }
 a:active {
-    color: #FFFFFF;
-}
-a:visited {
-    color: #B50000;
+    color: #FFF;
 }
 nav {
     margin: 10px;
@@ -41,14 +41,14 @@ h1 {
     background-color: #0073A8;
     margin: auto;
     width: 80%;
-    color: #FFFFFF;
+    color: #FFF;
     border-radius: 30px;
 }
 h2 {
     background-color: #0073A8;
     margin: auto;
     width: 50%;
-    color: #FFFFFF;
+    color: #FFF;
     border-radius: 30px;
 }
 p {
@@ -65,7 +65,7 @@ img {
     width: 90%;
 }
 figcaption {
-    color: #FFFFFF;
+    color: #FFF;
     font-style: italic;
 }
 li {
