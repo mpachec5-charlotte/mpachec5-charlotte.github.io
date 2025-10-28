@@ -49,28 +49,21 @@
 <body>
     <header>
         <div data-include="components/header.html"></div>
-        <h2>Introduction Form</h2>
     </header>
     <main>
+        <h2>Introduction Form</h2>
         <h3>Please submit the form below.</h3>
         <form>
             <fieldset>
                 <legend>Name Information</legend>
                 <label for="firstName">First Name:</label>
-                <input id="firstName" name="firstName" type="text" placeholder="First name here" value="Marlon" required><br>
+                <input id="firstName" name="firstName" type="text" placeholder="First name here" value="Emilio" required><br>
                 <label for="middleName">Middle Name:</label>
-                <input id="middleName" name="middleName" type="text" placeholder="Middle initial here" value="E"><br>
+                <input id="middleName" name="middleName" type="text" placeholder="M.I."><br>
                 <label for="lastName">Last Name:</label>
-                <input id="lastName" name="lastName" type="text" placeholder="Last name here" value="Pacheco Arroyo" required><br>
+                <input id="lastName" name="lastName" type="text" placeholder="Last name here" value="Pacheco" required><br>
                 <label for="preferred">Preferred Name:</label>
                 <input id="preferred" name="preferred" type="text" placeholder="Preferred name here">
-        </fieldset>
-        <fieldset>
-            <legend>Acknowledgement Information</legend>
-            <label for="acknowledgementStatement">Enter the following: "I acknowledge that the information I present here is public." and your initials</label>
-            <input id="acknowledgementStatement" name="acknowledgementStatement" type="text" placeholder="Enter the statement and your initials" value="I acknowledge that the information I present here is public. - E.P.A." required><br>
-            <label for="acknowledgementDate">Enter the Date:</label><br>
-            <input id="acknowledgementDate" name="acknowledgementDate" type="text" placeholder="Enter today's date" value="10/26/2025" required>
         </fieldset>
         <fieldset>
             <legend>Mascot Information</legend>
@@ -79,12 +72,12 @@
             <label for="mascotAnimal">Mascot Animal: </label>
             <input id="mascotAnimal" name="mascotAnimal" type="text" placeholder="Enter an animal that starts with the first letter of your last name" value="Cat" required><br>
             <label for="divider">Divider: </label>
-            <input id="divider" name="divider" type="text" placeholder="Enter a divider" value="|">
+            <input id="divider" name="divider" type="text" placeholder="Enter a divider" value="||">
         </fieldset>
         <fieldset>
             <legend>Picture Information</legend>
             <label>Add image: </label>
-            <input type="file" name="file" id="introImage" required>
+            <input type="file" name="file" id="introImage">
             <button type="button" onclick="loadImage()">Click Here to Load</button>
             <div id="loadImage">
                 <img src="images/intro_img.png" alt="Default profile">
@@ -128,22 +121,6 @@
             <input id="funny" name="funny" type="text" placeholder="Enter something funny you'd like to share" value="I love cats even though I'm allergic to them."><br>
             <label for="other">Something I'd Like to Share (Optional): </label><br>
             <input id="other" name="other" type="text" placeholder="Enter something you'd like to share" value="I have travelled to all 50 states in the U.S.">
-        </fieldset>
-        <fieldset>
-            <legend>Link Information</legend>
-            <label for="webpages">Charlotte.edu</label><br>
-            <input id="webpages" name="webpages" type="url" placeholder="Enter your CLT Website link" value="https://webpages.charlotte.edu/mpachec5/" required><br>
-            <label for="github">GitHub</label><br>
-            <input id="github" name="github" type="url" placeholder="Enter your GitHub link" value="https://github.com/mpachec5-charlotte" required><br>
-            <label for="githubIo">GitHub.io</label><br>
-            <input id="githubIo" name="githubIo" type="url" placeholder="Enter your GitHub.io site" value="https://mpachec5-charlotte.github.io/" required><br>
-            <label for="freeCodeCamp">FreeCodeCamp</label><br>
-            <input id="freeCodeCamp" name="freeCodeCamp" type="url" placeholder="Enter your FreeCodeCamp link" value="https://www.freecodecamp.org/mpachec5-charlotte" required><br>
-            <label for="codecademy">Codecademy</label><br>
-            <input id="codecademy" name="codecademy" type="url" placeholder="Enter your Codecademy link" value="https://www.codecademy.com/profiles/mpachec5-charlotte" required><br>
-            <label for="linkedIn">LinkedIn</label><br>
-            <input id="linkedIn" name="linkedIn" type="url" placeholder="Enter your LinkedIn link" value="https://www.linkedin.com/in/marlon-pacheco-arroyo-0a055b253" required>
-            <div class="spacer"></div>
         </fieldset>
         <button type="submit">Submit</button><br>
         <div class="spacer"></div>

@@ -39,15 +39,22 @@ nav {
 }
 h1 {
     background-color: #0073A8;
-    margin: auto;
+    margin: 10px auto;
     width: 80%;
     color: #FFF;
     border-radius: 30px;
 }
 h2 {
     background-color: #0073A8;
-    margin: auto;
+    margin: 10px auto;
     width: 50%;
+    color: #FFF;
+    border-radius: 30px;
+}
+h3 {
+    background-color: #0073A8;
+    margin: 10px auto;
+    width: 40%;
     color: #FFF;
     border-radius: 30px;
 }
@@ -61,7 +68,7 @@ figure {
     border-radius: 30px;
 }
 img {
-    margin: auto;
+    margin: 10px auto;
     width: 90%;
 }
 figcaption {

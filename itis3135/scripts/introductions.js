@@ -11,16 +11,16 @@ function addCourse() {
   li.innerHTML = `
     <div class="course-inputs">
         <label>Department:</label><br>
-        <input type="text" name="dept-${id}" placeholder="4-digit department code" value="ITCS" required><br>
+        <input type="text" name="dept-${id}" placeholder="4-digit department code" required><br>
 
         <label>Course Number:</label><br>
-        <input type="text" name="number-${id}" placeholder="4-digit course number" value="4230" required><br>
+        <input type="text" name="number-${id}" placeholder="4-digit course number" required><br>
 
         <label>Course Name:</label><br>
-        <input type="text" name="name-${id}" placeholder="Course name" value="Intro to Game Design" required><br>
+        <input type="text" name="name-${id}" placeholder="Course name" required><br>
 
         <label>Reason for Taking:</label><br>
-        <input name="reason-${id}" type="text" placeholder="Why are you taking this course?" value="I am interested in the designing of games.">
+        <input name="reason-${id}" type="text" placeholder="Why are you taking this course?" required>
         <div class="spacer"></div>
         <button type="button" class="remove-btn" onclick="removeCourse(${id})">Delete Course</button>
     </div><br>
@@ -57,8 +57,6 @@ function generateOutputPage() {
     middleName: get("middleName"),
     lastName: get("lastName"),
     preferred: get("preferred"),
-    acknowledgementStatement: get("acknowledgementStatement"),
-    acknowledgementDate: get("acknowledgementDate"),
     mascotAdjective: get("mascotAdjective"),
     mascotAnimal: get("mascotAnimal"),
     divider: get("divider"),
@@ -71,13 +69,7 @@ function generateOutputPage() {
     quote: get("quote"),
     quoteAuthor: get("quoteAuthor"),
     funny: get("funny"),
-    other: get("other"),
-    webpages: get("webpages"),
-    github: get("github"),
-    githubIo: get("githubIo"),
-    freeCodeCamp: get("freeCodeCamp"),
-    codecademy: get("codecademy"),
-    linkedIn: get("linkedIn")
+    other: get("other")
   };
 
   const courses = Array.from({ length: courseCount }, (_, i) => {
@@ -108,8 +100,8 @@ function generateOutputPage() {
 
   const main = document.querySelector("main");
   main.innerHTML = `
-    <div class="spacer"></div>
-    <h2>${fullName} ${data.divider} ${data.mascotAdjective} ${data.mascotAnimal}</h2>
+    <h2>Introduction Form</h2>
+    <h3>${fullName} ${data.divider} ${data.mascotAdjective} ${data.mascotAnimal}</h3>
     <figure>
       ${imageSrc ? `<img src="${imageSrc}" alt="${data.imageCaption}">` : '<img src="images/intro_img.png" alt="Default profile">'}
       <figcaption>${data.imageCaption}</figcaption>
@@ -135,17 +127,6 @@ function generateOutputPage() {
       "${data.quote}"<br>
       - <span style="font-style: italic">${data.quoteAuthor}</span>
     </p>
-    <nav>
-      <a href="${data.webpages}" target="_blank">Charlotte.edu</a> ${data.divider}
-      <a href="${data.github}" target="_blank">GitHub</a> ${data.divider}
-      <a href="${data.githubIo}" target="_blank">GitHub.io</a> ${data.divider}
-      <a href="${data.freeCodeCamp}" target="_blank">FreeCodeCamp</a> ${data.divider}
-      <a href="${data.codecademy}" target="_blank">Codecademy</a> ${data.divider}
-      <a href="${data.linkedIn}" target="_blank">LinkedIn</a>
-    </nav>
-    <div class="spacer"></div>
-    <p><small>${data.acknowledgementStatement}</small></p>
-    <p><small>Date: <i>${data.acknowledgementDate}</i></small></p>
   `;
 }
 
@@ -183,4 +164,36 @@ formElement.addEventListener("submit", function(e) {
   }
   
   generateOutputPage();
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  addCourse();
+  document.querySelector('input[name="dept-1"]').value = "ITCS";
+  document.querySelector('input[name="number-1"]').value = "4230";
+  document.querySelector('input[name="name-1"]').value = "Intro to Game Design";
+  document.querySelector('input[name="reason-1"]').value = "I am interested in the designing of games.";
+  
+  addCourse();
+  document.querySelector('input[name="dept-2"]').value = "ITIS";
+  document.querySelector('input[name="number-2"]').value = "3135";
+  document.querySelector('input[name="name-2"]').value = "Front-End Web App Development";
+  document.querySelector('input[name="reason-2"]').value = "I need it to graduate..";
+  
+  addCourse();
+  document.querySelector('input[name="dept-3"]').value = "ITSC";
+  document.querySelector('input[name="number-3"]').value = "3610";
+  document.querySelector('input[name="name-3"]').value = "Computing Leaders Seminar";
+  document.querySelector('input[name="reason-3"]').value = "I am interested in leadership, and also computers.";
+  
+  addCourse();
+  document.querySelector('input[name="dept-4"]').value = "ITCS";
+  document.querySelector('input[name="number-4"]').value = "3153";
+  document.querySelector('input[name="name-4"]').value = "Intro to Artificial Intelligence";
+  document.querySelector('input[name="reason-4"]').value = "I am interested in AI and how it really works.";
+  
+  addCourse();
+  document.querySelector('input[name="dept-5"]').value = "ITIS";
+  document.querySelector('input[name="number-5"]').value = "3130";
+  document.querySelector('input[name="name-5"]').value = "Human-Centered Computing";
+  document.querySelector('input[name="reason-5"]').value = "I need it to graduate.";
 });
